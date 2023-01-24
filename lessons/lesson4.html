@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Lesson 1</title>
+</head>
+
+<body>
+    <input type="button" value="turn on the lights" onclick="lightsOn();">
+    <img src="/img/moon.png" alt="moon" id="picture" style="width:130px; height:130px;">
+    <input type="button" value="turn off the lights" onclick="lightsOff();"> <br> <br> <br>
+
+    <input type="button" value="change css" onclick="changeCss();">
+    <h2 id="result" style="display: none;">change this content</h2>
+    
+    <script>
+
+        function lightsOn(){
+            document.getElementById('picture').src="/img/sun.png";
+        };
+
+        function lightsOff(){
+            document.getElementById('picture').src="/img/moon.png";
+        };
+
+        function changeCss(){
+            document.getElementById('result').style.color="deeppink";
+            document.getElementById('result').style.display="block";
+        }
+
+    </script>
+
+
+</body>
+
+</html>
