@@ -1,0 +1,26 @@
+<!--
+    object
+-->
+
+<html>
+<head>
+    <title>Lesson 19</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var car={
+            brand:"Nissan",
+            model:"400A",
+            color:"black",
+            start: function name(params) {
+                return this.brand + " " + this.model + " is started"; 
+            }
+        };
+
+        document.getElementById('result').innerHTML= car.color + "<br>" + car.start();
+        
+    </script>
+</body>
+
+</html>
