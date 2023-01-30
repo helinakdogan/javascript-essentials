@@ -1,0 +1,46 @@
+<!--
+    variables
+    operators
+    operator presedence
+    data types
+    typeof
+-->
+
+<html>
+<head>
+    <title>Lesson 11 12 13 14 15 16</title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+
+    <script>
+        //primitive data types
+        x="aaa"; //string
+        y=75e4; //number 
+        z=7.7; //number 
+        bool=true; //boolean 
+        u=undefined; //undefined
+        n=null; //null's type is an object
+
+        //referance data type
+        var person={ name:"Helin", age:21}; //object 
+
+        var languages=["javascript", "java"];  //array's type is object
+        document.getElementById('result').innerHTML= languages[0] + "<br>" + languages[1];
+
+        var elements=["e1", "e2", "e3", "e4", "e5", "e6"]; //array's type is object 
+        for( var i=0; i<elements.length; i++){
+            document.getElementById('result1').innerHTML += elements[i] + "<br>";
+        }
+
+        function test(){};  //function's type is function
+
+
+        document.getElementById('result2').innerHTML = typeof u + " " + typeof n + " " + typeof person + " " + typeof languages;
+
+    </script>
+</body>
+
+</html>
