@@ -1,0 +1,28 @@
+<!--
+    Javascript output
+    1. id and innerHTML
+    2. document.write() - It will delete all existing HTML content before it is used!
+    3. window.alert()
+    4. console.log() - F12
+-->
+
+<html>
+<head>
+    <title>Lesson 6</title>
+    <script>
+        document.write("using documant.write()");
+        window.alert("alert message");
+        alert("alert message 2");
+        console.log("using console.log");
+    </script>
+</head>
+<body>
+    
+    <div id="result">my codes</div>
+
+    <script>
+        document.getElementById('result').innerHTML="using innerHTML via Javascript";
+    </script> 
+</body>
+
+</html>
