@@ -1,0 +1,41 @@
+<!--
+    number and number methods
+    * toString()
+    * toExponantial()
+    * toFixed()
+    * toPrecision()
+    * valueOf()
+    * parseInt() parsFloat()
+-->
+
+<html>
+
+<head>
+    <title>Lesson 25 26 27 28 29</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <input type="text" placeholder="only enter a number" id="number">
+    <button type="button" onclick="printScreen()">click here</button>
+    <script>
+
+        printScreen();
+
+        function printScreen() {
+
+            var x = document.getElementById('number').value;
+
+            if (isNaN(x)) {
+                document.getElementById('result').innerHTML = "please only enter a number";
+            }
+            else {
+                document.getElementById('result').innerHTML = "well done, your number is " + x;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
