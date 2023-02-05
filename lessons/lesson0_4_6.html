@@ -1,0 +1,39 @@
+<!--
+    event
+    * onload
+    * onChange
+    * onClick
+    * onMouseOver
+    * onMouseOut
+-->
+
+<html>
+
+<head>
+    <title>Lesson 46</title>
+</head>
+
+<body>
+    <button type="button" onclick="show()"> do while loop</button>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <script>
+        function show() {
+            var message = "", message2 = "", i = 1, number = 12;
+            do {
+                message += "Number is " + i + "<br>";
+                i++;
+
+                if(i==number){
+                    message2 = "Last number is " + number + "<br>";
+                }
+            }
+            while (i < number)
+
+            document.getElementById('result').innerHTML = message;
+            document.getElementById('result2').innerHTML = message2;
+        }
+    </script>
+</body>
+
+</html>

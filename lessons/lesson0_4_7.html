@@ -1,0 +1,61 @@
+<!--
+    break
+    continue
+    label
+-->
+
+<html>
+
+<head>
+    <title>Lesson 47</title>
+</head>
+
+<body>
+    <!--
+    <button type="button" onclick="show()">click here</button>
+    <input type="text" id="take">
+    <div id="result"></div>
+-->
+    <div id="result"></div>
+
+    <script>
+        /*
+                function show() {
+                    var takeValue = document.getElementById('take').value;
+                    var message = "";
+                    switch (takeValue) {
+                        case "a": message = "aaaaaa";
+                            break;
+                        case "b": message = "bbbbbb";
+                            break;
+                        default: message = "invalid letter";
+                            break;
+                    }
+                document.getElementById('result').innerHTML = message;
+                }
+        */
+
+        var message = "";
+        for (i = 0; i < 20; i++) {
+            if (i == 5) {
+                continue;
+            }
+            message += "number is " + i + "<br>";
+        }
+        document.getElementById('result').innerHTML = message;
+
+
+
+
+        //label
+        var languages=["javascript", "java", "C#"]; 
+        var text = "";
+        list:{
+            text += languages[0]+"<br>";
+            break list;
+        }
+        document.getElementById('result').innerHTML = text;
+    </script>
+</body>
+
+</html>
