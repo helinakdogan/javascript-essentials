@@ -9,30 +9,76 @@
 </head>
 
 <style>
-    body{
-        color:rgb(48, 4, 113);
+    body {
+        color: #14022f;
         background-color: black;
     }
-    #game{
-        width: 350px;
+
+    #game {
+        width: 400px;
         background-color: rgb(110, 211, 137);
         padding: 20px;
         text-align: center;
         margin: auto;
         border-radius: 20px;
     }
-    h1{
+
+    h1 {
         margin: 0 0 20px 0;
-        border: 2px solid green;
+        border: 2px solid black;
+        background-color: rgb(88, 12, 181);
         padding: 5px;
-        font-weight: 400;
+        font-weight: 530;
         border-radius: 10px;
     }
-    span{
+
+    span {
         font-size: 125%;
         padding: 15px;
     }
+
+    #result {
+        width: 100px;
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #answer {
+        margin-top: 10px;
+        padding: 5px;
+        border: none;
+        background-color: rgb(88, 12, 181);
+        color: white;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+
+    #answer:hover {
+        background-color: rgb(83, 72, 140);
+        color: rgb(184, 179, 189);
+    }
+
+    #True,
+    #False {
+        font-size: 150%;
+        margin-top: 10px;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    #True {
+        background-color: rgb(6, 119, 57);
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+
+    #False {
+        background-color: rgb(142, 3, 3);
+        border: 1px solid black;
+        border-radius: 3px;
+    }
 </style>
+
 <body>
 
     <div id="game">
@@ -50,7 +96,78 @@
         <div id="False">0</div>
         <div style="clear:both"></div>
     </div>
-    
+
+
+    <script>
+
+        //declaration
+        var number1, number2, operator, result, answer, _true = 0, _false = 0;
+
+        //reaching html using ids
+        number1 = document.getElementById('Number1');
+        number2 = document.getElementById('Number2');
+        operator = document.getElementById('Operator');
+        answer = document.getElementById('answer');
+        _false = document.getElementById('False');
+        _true = document.getElementById('True');
+        result = document.getElementById('result');
+
+        //generating random numbers function
+        function randomNumber(min, max) {
+            var number = Math.floor(Math.random() * (max - min)) + min;
+            return number;
+        }
+
+        //for getting a new question
+        function newQuestion() {
+            var operation = ["+", "-", "/", "*"];
+            operator.textContent = operation[randomNumber(0, 4)]; //choosing operator
+            number1.textContent = randomNumber(0, 50);
+            number2.textContent = randomNumber(0, 50);
+
+            //division without remainder
+            if (operator.textContent == "/") {
+                while (true) {
+                    number2.textContent = randomNumber(0, 50);
+                    if (number1.textContent % number2.textContent == 0) {
+                        break;
+                    }
+                }
+            }
+        }
+
+        //when page is loaded, newQuestion() runs
+        window.onload = function () {
+            newQuestion();
+        }
+
+        //when you click the button
+        answer.onclick = function () {
+            var ans, n1, n2;
+            n1 = Number(number1.textContent);
+            n2 = Number(number2.textContent);
+            switch (operator.textContent) {
+                case '+': ans = n1 + n2;
+                    break;
+                case '-': ans = n1 - n2;
+                    break;
+                case '/': ans = n1 / n2;
+                    break;
+                case '*': ans = n1 * n2;
+                    break;
+                default: break;
+            }
+            if(result.value == ans){
+                True.textContent = Number(True.textContent) + 1;
+            }
+            else{
+                False.textContent = Number(False.textContent) + 1;
+            }
+            newQuestion();
+        }
+
+    </script>
+
 </body>
 
 </html>
