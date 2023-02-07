@@ -1,0 +1,31 @@
+<!--
+    typeof
+    finding type via constructor
+-->
+
+<html>
+<head>
+    <title>Lesson 49</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('result').innerHTML =
+            "aaaa " + typeof "aaaa" + "<br>" +
+            "7 " + typeof (7) + "<br>" +
+            "7.77 " + typeof (7.77) + "<br>" +
+            "NaN " + typeof NaN + "<br>" +
+            "true " + typeof true + "<br>" +
+            "[6,7,8] " + typeof [6, 7, 8] + "<br>" +
+            "{name:'xxx' , number:'6'} " + typeof { name: 'xxx', number: '6' } + "<br>" +
+            "new Date() " + typeof new Date() + "<br>" +
+            "function(){} " + typeof function () { } + "<br>" +
+            "null " + typeof null + "<br>" +
+            "x variable " + typeof x + "<br>";
+    </script>
+
+</body>
+
+</html>
