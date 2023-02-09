@@ -1,0 +1,29 @@
+<!--
+   regular expressions
+   * modifiers -> i , g , m
+   * quantifiers 
+   * methods -> test() , exec()
+-->
+
+<html>
+<head>
+    <title>Lesson 57</title>
+</head>
+
+<body>
+   
+    <p id="result"></p>
+
+    <script>
+
+        var text = "aaaaaaaa xxxxxx Javascript javascript bbbbbb javascript ccccccc ddddddd";
+        document.getElementById('result').innerHTML = text.search(/javascript/i);
+        //document.getElementById('result').innerHTML = text.search(/javascript/igm);
+        //document.getElementById('result').innerHTML = text.search = /ab/.test(text);
+        //document.getElementById('result').innerHTML = text.search = /ab/.exec(text);
+
+    </script>
+
+</body>
+
+</html>
