@@ -1,17 +1,22 @@
 <!--
    best practices
-   * avoid globals (for example, declare variables in function)
+   * avoid globals (for example, declare variables within function)
    * understand difference between 
      =     assigns left value to right value  
      ==    compares if both have same value 
      ===   compares if both have same data type and value 
    * avoid new keyword
+
+   performance
+   * avoid unwanted loops
+   * minimize DOM access
+   * avoid with
 -->
 
 <html>
 
 <head>
-    <title>Lesson 62</title>
+    <title>Lesson 64 65</title>
 </head>
 
 <body>
@@ -19,8 +24,14 @@
     <p id="result"></p>
     
     <script>
-        document.getElementById('result').innerHTML = "";
+        var result = document.getElementById('result'); //to not repeat
+        var i=0; //for performance, loop will run faster
+        var num = [2,3,4,5];
+        var len = num.length;
 
+        for(; i<len; i++){
+         result.innerHTML += num[i] + " ";
+        }
     </script>
 
 </body>
