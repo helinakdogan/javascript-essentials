@@ -1,5 +1,6 @@
 <!--
     BOM 
+    Window
 -->
 
 <html>
@@ -10,8 +11,59 @@
 
 <body>
 
+    <button type="button" onclick="openWindow()">open window</button>
+    <button type="button" onclick="resizeWindow()">resize window</button>
+    <button type="button" onclick="moveWindow()">move window</button>
+    <button type="button" onclick="closeWindow()">close window</button>
+
     <p id="result"></p>
 
+    <script>
+        var result, newWindow;
+        result = document.getElementById('result');
+
+        function openWindow() {
+            newWindow = window.open("https://www.youtube.com/","newWindow","width=600, height=400");
+            //newWindow.document.write("new window is open");
+        }
+
+        function resizeWindow() {
+            newWindow.resizeTo(200, 200);
+        }
+
+        function moveWindow() {
+            newWindow.moveTo(500, 1000);
+        }
+
+        function closeWindow() {
+            newWindow.close();
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
     <script>
         var w, h;
         result = document.getElementById('result');
@@ -20,7 +72,7 @@
         result.innerHTML = "browser size " + w + " : " + h;
 
     </script>
-
+-->
 
 </body>
 
