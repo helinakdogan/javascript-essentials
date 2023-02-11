@@ -1,0 +1,41 @@
+<!--
+    window.screen
+    window.location
+-->
+
+<html>
+
+<head>
+    <title>Lesson 70</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="load()">load the page</button>
+
+    <script>
+        var result, newWindow;
+        result = document.getElementById('result');
+        result.innerHTML =
+            "screen.width " + screen.width + "<br>" +
+            "screen.height " + screen.height + "<br>" +
+            "screen.availWidth " + screen.availWidth + "<br>" +
+            "screen.availHeight " + screen.availHeight + "<br>" +
+            "screen.colorDepth " + screen.colorDepth + "<br>" +
+            "screen.pixelDepth " + screen.pixelDepth + "<br>"+ "<br>"+
+
+            "window.location.href " + window.location.href + "<br>" +
+            "window.location.hostname " + window.location.hostname + "<br>" +
+            "window.location.pathname " + window.location.pathname + "<br>" +
+            "window.location.protocol " + window.location.protocol + "<br>" +
+            "window.location.assign " + window.location.port + "<br>" ;
+            
+            function load() {
+                window.location.assign("https://www.javascript.com/");
+            }
+            
+    </script>
+
+</body>
+
+</html>
