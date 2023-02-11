@@ -1,0 +1,43 @@
+<!--
+   adding external js file in html
+-->
+
+<html>
+
+<head>
+    <title>Lesson 66</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <button type="button" id="externalJs">call js</button>
+
+    <script>
+
+        var getJs = document.getElementById('externalJs');
+
+        getJs.onclick = function () {
+            var createScript = document.createElement("script");
+            createScript.type = "text/javascript";
+            createScript.src = "js/message.js";
+            document.body.appendChild(createScript);
+        }
+    </script>
+
+
+
+
+
+
+    <!-- var getElement = document.createElement("script");
+         getElement.type = "text/javascript";
+         getElement.src = "js/message.js";
+         document.body.appendChild(getElement);
+        
+        created this:
+        <script type="text/javascript" src="js/message.js"></script>
+    -->
+</body>
+
+</html>
