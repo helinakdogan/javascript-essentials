@@ -1,0 +1,60 @@
+<!--
+    popup box
+    * alert box
+    * confirm box
+    * prompt box
+-->
+
+<html>
+
+<head>
+    <title>Lesson 72</title>
+</head>
+
+<body>
+
+    <button type="button" onclick="alertBox()" style="background-color:red">alert box</button>
+    <button type="button" onclick="confirmBox()" style="background-color:cornflowerblue">confirm box</button>
+    <button type="button" onclick="promptBox()" style="background-color:blueviolet">prompt box</button>
+    <p id="result"></p>
+   
+    <script>
+        var result, newWindow;
+        result = document.getElementById('result'); 
+        
+        function alertBox() {
+            alert("This a warning \nBe careful");
+        }
+
+        function confirmBox() {
+            var message;
+            if(confirm("Do you really want to leave?") == true){
+                message = "Goodbye :(";
+            }
+            else{
+                message = "Welcome back :)";
+            }
+            result.innerHTML = message;
+        }
+
+        function promptBox() {
+            var message, getValue;
+            getValue = prompt("Please enter your username");
+            
+            if(getValue == null || getValue == ""){
+                message = "You cannot leave this blank";
+            }
+            else if(getValue == "romeo"){
+                message = "Seems like this username has already taken, try again :)";
+            }
+            else{
+                message = "Welcome to our page, " + getValue + "!";
+            }
+            result.innerHTML = message;
+        }
+       
+    </script>
+
+</body>
+
+</html>
