@@ -1,0 +1,48 @@
+<!--
+   validation API
+   * checkValidity()
+   * rangeOverflow()
+   * validateMessage
+   * checkbox !!!
+-->
+
+<html>
+
+<head>
+    <title>Lesson 76</title>
+</head>
+
+<body>
+
+    number <input type="number" id="number" name="number" class="form-control" max="10" min="3" required>
+    <button type="button" onclick="validateForm()">click here</button>
+
+    <p id="result" style="display: none; color:azure"></p>
+
+
+
+    <script>
+
+        function validateForm() {
+            var result, valueInput, message;
+            valueInput = document.getElementById('number');
+            result = document.getElementById('result');
+            result.style.display = "block";
+
+            if (valueInput.checkValidity() == false) {
+                result.style.color = "crimson";
+                result.innerHTML = valueInput.validateMessage; //default validation message
+            }
+            else{
+                result.style.color = "limegreen";
+                result.innerHTML = "no problem"; 
+            }
+          
+
+        }
+
+    </script>
+
+</body>
+
+</html>
