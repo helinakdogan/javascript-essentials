@@ -1,0 +1,50 @@
+<!--
+   form validation
+   * required is enough
+-->
+
+<html>
+
+<head>
+    <title>Lesson 74</title>
+</head>
+
+<body>
+
+    <form id="formBegin" name="formBegin" action="#" method="post">
+        username <input type="text" id="username" name="username" required>
+        password <input type="password" id="password" name="password">
+        <button type="button" onclick="validateForm()">click here</button>
+    </form>
+
+    <p id="result" style="display: none;"></p>
+
+
+    
+    <script>
+
+        function validateForm() {
+            var result, valueInput, message;
+            result = document.getElementById('result');
+            valueInput = document.getElementById('username').value;
+            result.style.display = "block";
+
+
+            if (valueInput == "") {
+                message = "username cannot be empty";
+            }
+            else if (isNaN(valueInput)) {
+                message = "please enter only a number";
+            }
+            else {
+                message = "your answer is submitted";
+            }
+            result.innerHTML = message;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
