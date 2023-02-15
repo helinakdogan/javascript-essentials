@@ -1,0 +1,54 @@
+<!--
+    time events
+    * setTimeout(function, delay)
+    * setInterval(function, delay)
+    * clearTimeout()
+-->
+
+<html>
+
+<head>
+    <title>Lesson 73</title>
+</head>
+
+<body>
+
+    <p><input type="text" id="data1" name="data1"></p>
+    <p><input type="text" id="data2" name="data2"></p>
+
+<!--
+    <button type="button" onclick="deleteTime = setTimeout(process, 2000)">set time</button>
+    <button type="button" onclick="clearTimeout(deleteTime)">stop time out</button>
+    <button type="button" onclick="clearInterval(times)">stop interval</button>
+-->
+    <p id="result"></p>
+    <p id="result3"></p>
+
+    <script>
+        var result, times, result3;
+        result = document.getElementById('result');
+        result3 = document.getElementById('result3');
+
+       times = setInterval(process, 1000);
+
+/*
+        function process() {
+            var d = new Date();
+            result.innerHTML = d.toLocaleTimeString();
+        }
+*/
+        function process3() {
+            var data1, data2, resultValue;
+            data1 = Number(document.getElementById('data1').value);
+            data2 = Number(document.getElementById('data2').value);
+            resultValue = data1 * data2;
+            result3.innerHTML = resultValue;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
