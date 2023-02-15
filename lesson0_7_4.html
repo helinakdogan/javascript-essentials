@@ -1,0 +1,35 @@
+<!--
+   accessing form elements
+-->
+
+<html>
+
+<head>
+    <title>Lesson 74</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+
+    <form id="formBegin" name="formBegin">
+        username <input type="text" id="username" name="username">
+        password <input type="password" id="password" name="password">
+        <button type="button" onclick="printScreen()">click here</button>
+
+    </form>
+
+    <script>
+
+        function printScreen() {
+            var result, valueForm;
+            result = document.getElementById('result');
+            valueForm = document.formBegin.username.value;
+            result.innerHTML = valueForm;
+        }
+
+    </script>
+
+</body>
+
+</html>
