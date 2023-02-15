@@ -1,0 +1,43 @@
+<!--
+   getElementsByName()
+-->
+
+<html>
+
+<head>
+    <title>Lesson 77</title>
+</head>
+
+<body>
+
+    username <input type="text" id="username" name="username" class="form-control">
+    <button type="button" onclick="Javascript:show()">click here</button>
+
+    <p id="result" style="display: none; color:azure"></p>
+    <p name="test" style="display: none;"></p>
+    <p name="test" style="display: none;"></p>
+    <p name="test" style="display: none;"></p>
+    <p name="test" style="display: none;"></p>
+
+
+    <script>
+
+        function show() {
+            var username, usernames;
+            username = document.getElementById('username').value;
+            usernames = document.getElementsByName('test');
+           
+            for (i = 0; i < usernames.length; i++) {
+                usernames[i].style.display = "block";
+            }
+
+            for (j = 0; j < usernames.length; j++) {
+                usernames[j].innerHTML = username;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
