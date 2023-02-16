@@ -1,14 +1,18 @@
 <!--
-   what is object
+   What is object?
    * functions in object -> methods
    * properties
    * this
-   * literal
-   * new keyword is slow
-   * static object
    * constructor
-   * dynamic object
-   * default objects
+   * Javascript's default object constructors ( like d = new Date(); )
+   * Math object
+   * !: avoid new keyword (slow)
+
+   How to create new object?
+   1. create a single object, using an object literal  -> static
+   2. create a single object, with the keyword new  -> static
+   3. define an object constructor, and then create objects of the constructed type  -> dynamic
+   4. create an object using Object.create()  -> dynamic
 -->
 
 <html>
@@ -19,11 +23,65 @@
 
 <body>
 
-    <p id="result" ></p>
-    
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+
     <script>
 
-       
+        // 1. object-literal syntax
+        var dog = {
+            name: "Romeo",
+            color: "champagne",
+            age: 3,
+            showInfo: function () {
+                return this.name + " " + this.color + " " + this.age;
+            }
+        }
+
+        document.getElementById('result').innerHTML =
+            dog.name + "<br>" +
+            dog.showInfo();
+
+
+
+        // 2. new keyword   
+        var cat = new Object();
+        cat.name = "Leo";
+        cat.eyeColor = "green";
+
+        document.getElementById('result2').innerHTML =
+            cat.name + "<br>";
+
+
+
+        // 3. constructor 
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        var myPerson1 = new person("Helin", 21);
+
+        document.getElementById('result3').innerHTML =
+            myPerson1.name;
+
+
+
+        // 4. Object.create() 
+        function fruits() {
+            this.categoryOfFood = "fruit";
+        }
+        function apple() {
+            fruits.call(this);
+            this.name = "apple";
+        }
+        apple.prototype = Object.create(fruits.prototype);
+        fruitApple = new apple();
+
+        document.getElementById('result4').innerHTML =
+            fruitApple.categoryOfFood + "<br>" + 
+            fruitApple.name;
 
     </script>
 
