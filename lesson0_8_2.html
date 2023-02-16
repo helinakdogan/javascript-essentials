@@ -1,0 +1,59 @@
+<!--
+   function details
+   * returning a function in another function
+   * declaring a function as a variable
+   * recursive function
+   * !: Type of a function is object.
+   * arguments.length
+
+   * call and apply
+-->
+
+<html>
+
+<head>
+    <title>Lesson 82 83 84</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+
+    <script>
+
+        function multi(x,y=1) { //default argument for y is 1
+            return x*y;
+        }
+        function print(x){
+        document.getElementById('result').innerHTML = x;
+        }
+
+
+
+        
+        var dog = {
+            name: "Romeo",
+            color: "champagne",
+            age: 3,
+            number: 5,
+            showNumber: function () {
+                return this.number;
+            }
+        }
+
+        var pets = {
+            number: 10
+        }
+
+        var x = dog.showNumber.call(pets);
+        document.getElementById('result2').innerHTML = x;
+
+
+    </script>
+
+</body>
+
+</html>
