@@ -1,0 +1,44 @@
+<!--
+   object prototypes
+-->
+
+<html>
+
+<head>
+    <title>Lesson 81</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+
+    <script>
+
+        var myDog, prop, message = "", message2 = "";
+
+        function Dog(name, color, age) {
+            this.name = name;
+            this.color = color;
+            this.age = age;
+            this.changeAge = function (newAge) {
+                return this.age = newAge;
+            }
+        }
+
+        Dog.prototype.breed = "pomeranian";
+        Dog.prototype.showBreed = function () {
+            return this.breed;
+        }
+
+        myDog = new Dog("romeo", "champagne", 3);
+
+        document.getElementById('result').innerHTML = myDog.showBreed();
+   
+    </script>
+
+</body>
+
+</html>

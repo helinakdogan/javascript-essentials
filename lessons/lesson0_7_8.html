@@ -57,11 +57,11 @@
 
 
         // 3. constructor 
-        function person(name, age) {
+        function Person(name, age) {
             this.name = name;
             this.age = age;
         }
-        var myPerson1 = new person("Helin", 21);
+        var myPerson1 = new Person("Helin", 21);
 
         document.getElementById('result3').innerHTML =
             myPerson1.name;
@@ -69,15 +69,15 @@
 
 
         // 4. Object.create() 
-        function fruits() {
+        function Fruit() {
             this.categoryOfFood = "fruit";
         }
-        function apple() {
+        function Apple() {
             fruits.call(this);
             this.name = "apple";
         }
-        apple.prototype = Object.create(fruits.prototype);
-        fruitApple = new apple();
+        Apple.prototype = Object.create(Fruit.prototype);
+        fruitApple = new Apple();
 
         document.getElementById('result4').innerHTML =
             fruitApple.categoryOfFood + "<br>" + 
