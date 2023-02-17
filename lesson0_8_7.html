@@ -1,5 +1,15 @@
 <!--
-
+    ----reaching elements----
+    * document.getElementById(id)
+    * document.getElementsByTagName(name)
+    * document.getElementsByClassName(name)
+    * document.querySelectorAll() can be used with for loop
+      document.querySelector()
+      !: to call   
+          class -> .class      
+          id -> #id        
+          name -> [name=   ]
+ 
 -->
 
 <html>
@@ -10,21 +20,25 @@
 
 <body>
 
-    <p id="result"></p>
-    <p id="result2"></p>
-    <p id="result3"></p>
-    <p id="result4"></p>
-
     <div>
-        <h1>Javascript</h1>
+        <h1>Javascript1</h1>
+        <h1>Javascript2</h1>
+        <h1 class="color">Javascript3</h1>
+        <span>span</span>
         <a href="#">link</a>
-        <p>paragraph</p>       
+        <p id="p1">paragraph1</p>
+        <p name="p2">paragraph2</p>
+        <p class="color">paragraph3</p>
     </div>
 
     <script>
 
-        document.getElementById('result').innerHTML = "";
-      
+        var findElement = document.querySelectorAll('[name=p2]');
+        alert(findElement[0].innerText);
+
+        var findElement1 = document.querySelector('p.color');
+        alert(findElement1.innerText);
+
     </script>
 
 </body>
