@@ -6,34 +6,63 @@
 
 <head>
     <title>Lesson 91</title>
+    <style>
+        #demo{
+            border: 2px solid rgb(86, 9, 75);
+            overflow: scroll;
+            width: 200px;
+            height: 300px;
+        }
+    </style>
 </head>
 
-<body>
+<body onload="javascript:checkCookies()">
 
-    <p id="result"></p>
+    <h2 id="result"></h2>
 
-    <h2 onclick="this.innerHTML='Javascript'">click here</h2>
+    <h1 id="result2"></h1>
 
-    <h2 onclick="javascript:changeText(this)">click here</h2>
-
-    <button type="button" onclick="javascript:changeText(this)">click</button>
-
-    <button type="button" id="Btn">click</button>
-
+    <div id="demo" onscroll="scrollFunction()">
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+        <h2>test</h2>
+    </div>
     <script>
-        function changeText(arg) {
-            arg.innerHTML = "new text";
+        function checkCookies() {
+            var message = "";
+            if (navigator.cookieEnabled == false) {
+                message = "please, turn cookie settings on"
+            }
+            else {
+                message = "cookies are activated"
+            }
         }
 
-        Btn = document.querySelector('#Btn');
-        Btn.onclick = squareRoot;
-        function squareRoot() {
-            var number, result, Btn;
-            number = prompt("please enter a number");
-            result = Math.sqrt(number);
-            document.querySelector('#result').innerHTML = result;
+        window.onload = function () {
+            var obj = document.querySelector('#result');
+            obj.style.color = "crimson";
+            obj.innerHTML = "welcome"
         }
 
+        var x = 0;
+        function scrollFunction() {
+            document.querySelector('#result2').innerHTML = x++;
+        }
     </script>
 
 </body>
