@@ -1,0 +1,40 @@
+<!--
+    HTML DOM navigation
+    * root node, child nodes, parent node, text node, 
+      sibling nodes, next/previous sibling, first/last sibling
+    * nodeValue
+    * documentBody, documentElement
+
+    HTML DOM nodes and javascript
+-->
+
+<html>
+
+<head>
+    <title>Lesson 97 98</title>
+</head>
+
+<body>
+
+    <div id="result"></div>
+    <button type="button" id="btn">click here</button>
+
+    <h2 id="head">TITLE</h2>
+    <p id="p1">p1</p>
+    <p id="p2">p2</p>
+    <p id="p3">p3</p>
+    <p id="p4">p4</p>
+
+    <script>
+
+        var btn = document.querySelector('#btn');
+        var result = document.querySelector('#result');
+
+       var elementNodes = document.querySelector('#head').childNodes[0].nodeValue;
+       alert(elementNodes);
+       
+    </script>
+
+</body>
+
+</html>
