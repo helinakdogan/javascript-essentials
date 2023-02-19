@@ -1,0 +1,37 @@
+<!--
+     removeEventListener
+-->
+
+<html>
+
+<head>
+    <title>Lesson 96</title>
+</head>
+
+<body>
+
+    <div id="result"></div>
+    <div id="text">HTML DOM removeEventListener</div>
+    <button type="button" id="btn">click here</button>
+
+    <script>
+
+        var btn = document.querySelector('#btn');
+        var result = document.querySelector('#result');
+        var text = document.querySelector('#text');
+
+        text.addEventListener('mousemove', random1, false);
+        function random1() {
+            result.innerText = Math.floor(Math.random() * 101);
+        }
+
+        btn.onclick = function(){
+            text.removeEventListener('mousemove', random1);
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
