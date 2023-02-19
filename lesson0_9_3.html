@@ -1,0 +1,60 @@
+<!--
+    onMouseDown, onMouseUp, onFocus, onDblClick, onMouseMove, onKeyDown, onKeyUp
+-->
+
+<html>
+
+<head>
+    <title>Lesson 93</title>
+
+    <style>
+        #demo{
+            width: 200px;
+            height: 60px;
+            color: white;
+            background-color: black;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    
+    <input type="text" id="username" name="username" onfocus="test(this)">
+
+    <div id="demo">guess my colors</div>
+
+
+    <script>
+
+        var result = document.querySelector('#result');
+        var demo = document.querySelector('#demo');
+
+        demo.onmousedown = function () {
+           this.style.backgroundColor = "deeppink";
+           this.innerHTML = "pink :)";
+        }
+
+        demo.onmouseup = function () {
+           this.style.backgroundColor = "limegreen";
+           this.innerHTML = " green ;)";
+        }
+
+        demo.ondblclick = function () {
+           this.style.backgroundColor = "gold";
+           this.innerHTML = " yellow :D";
+        }
+
+        function test(obj) {
+            obj.style.backgroundColor = "orange";
+            obj.style.padding = "12px";
+            obj.style.color = "white";
+        }
+
+    </script>
+
+</body>
+
+</html>
