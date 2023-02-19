@@ -1,0 +1,38 @@
+<!--
+    onChange, onMouseOver, onMouseOut
+-->
+
+<html>
+
+<head>
+    <title>Lesson 92</title>
+</head>
+
+<body>
+
+    <h2 id="result"></h2>
+
+    <input type="text" id="username" name="username" onchange="changeFunction()">
+
+    <img src="/img/moon.png" id="pic" onmouseover="mOver(this)" onmouseout="mOut(this)">
+    
+    
+    <script>
+
+        function changeFunction() {
+            var getInput = document.querySelector('#username');
+            getInput.value = getInput.value.toUpperCase();
+        }
+
+        function mOver(obj) {
+            obj.src = "/img/sun.png";
+        }
+
+        function mOut(obj) {
+            obj.src = "/img/moon.png";
+        }
+    </script>
+
+</body>
+
+</html>
