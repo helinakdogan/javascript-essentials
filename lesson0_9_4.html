@@ -1,0 +1,38 @@
+<!--
+    eventListener -> you can you more than one event
+-->
+
+<html>
+
+<head>
+    <title>Lesson 94</title>
+</head>
+
+<body>
+
+    <div id="result">Do you want to learn today's date?</div>
+    <button type="button" id="btn">click here</button>
+
+    <script>
+
+        var btn = document.querySelector('#btn');
+        var result = document.querySelector('#result');
+
+        // **** like here
+        btn.addEventListener("click", showDate);
+        btn.addEventListener("click", showAlert);
+        btn.addEventListener("mouseover", mOver);
+
+        function showDate() {
+            document.querySelector('#result').innerHTML = "<span>" + Date() + "</span>";
+        }
+
+        function showAlert() {
+            alert("Have a nice day");
+        }
+       
+    </script>
+
+</body>
+
+</html>
