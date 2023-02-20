@@ -1,0 +1,31 @@
+<!--
+    show/hide app
+-->
+
+<html>
+
+<head>
+    <title>Lesson 101</title>
+</head>
+
+<body>
+
+    <p><input id="myCom" type="text" style="display:none"></p>
+    <a href="#" onclick="javascript:hideShow()">show/hide comment section</a>
+
+    <script>
+
+        function hideShow() {
+            var getElement = document.querySelector('#myCom');
+            if (getElement.style.display == "none") {
+                getElement.style.display = "block";
+            }
+            else {
+                getElement.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
