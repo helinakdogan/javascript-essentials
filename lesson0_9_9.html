@@ -1,5 +1,19 @@
 <!--
-  
+    switching between nodes
+    
+    * .parentNode
+
+    * .firstElementChild / .lastElementChild  (element child means element itself, not child of that element)
+    * .firstChild / .lastChild   (child of that element)
+    * .children[i]
+    * .childNodes[i]
+    
+    * .nextElementSibling / .previousElementSibling
+
+  ----------------------------
+    * .nodeName
+    * .nodeValue
+
 -->
 
 <html>
@@ -13,11 +27,27 @@
     <div id="result"></div>
     <button type="button" id="btn">click here</button>
 
+    <h3 id="head3">out of div</h3>
+
+    <div id="div1">
+        <h1 id="head">TITLE</h1>
+        <p id="p1">p1</p>
+        <p id="p2">p2</p>
+        <p id="p3">p3</p>
+        <p id="p4">p4</p>
+        <span id="p5">5</span>
+    </div>
+
     <script>
 
         var btn = document.querySelector('#btn');
         var result = document.querySelector('#result');
-       
+
+        var elementNodes = document.querySelector('#div1').parentNode;
+        elementNodes.style.color = "deeppink";
+
+
+
     </script>
 
 </body>
