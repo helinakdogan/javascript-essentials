@@ -1,0 +1,53 @@
+<!--
+    catch smile button game
+-->
+
+<html>
+
+<head>
+    <title>Lesson 102</title>
+    <style>
+        #obj{
+            width: 110px;
+            height: 110px;
+            position: absolute;
+            background-color: rgb(243, 227, 0);
+            border: none;
+            border-radius: 55px;
+            text-align: center;
+            font-size: 30;
+            font-weight: bold;
+            color: rgb(99, 2, 53);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" id="obj">catch me :)</button>
+    
+    <script>
+
+        var counter=0, obj, xpos,ypos;
+        obj = document.querySelector('#obj');
+        obj.onmouseover = function () {
+            counter++;
+            xpos = parseInt(Math.random()*1000);
+            ypos = parseInt(Math.random()*800);
+            obj.style.left = xpos + "px";
+            obj.style.top = ypos + "px";
+            obj.style.width = this.clientWidth + 10 + "px";
+            obj.style.height = this.clientHeight + 10 + "px";
+        }
+
+        obj.onclick = function () {
+            alert("You made it on the " + counter + "th try!")
+            obj.style.width = "110px";
+            obj.style.height = "110px";
+            counter = 0;
+        }
+    </script>
+
+</body>
+
+</html>
