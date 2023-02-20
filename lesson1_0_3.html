@@ -1,0 +1,38 @@
+<!--
+    redirect to another page
+-->
+
+<html>
+
+<head>
+    <title>Lesson 103</title>
+    <style>
+    
+    </style>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    
+    <script>
+
+        go("#result", "http://www.google.com", 7)
+        function go(id, address, second) {
+            if(second === 0){
+                window.location.href = address;
+            }
+            document.querySelector(id).textContent = "You will be redirected to the page in " + second + " seconds";
+            second--;
+           
+            //this works for every second
+            setTimeout(function(){
+                go(id, address, second);
+            }, 1000);
+
+        }
+    </script>
+
+</body>
+
+</html>
