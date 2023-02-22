@@ -1,0 +1,41 @@
+<!--
+    character limitation
+-->
+
+<html>
+
+<head>
+    <title>Lesson 105</title>
+</head>
+
+<body>
+
+    <form id="form1" name="form1">
+        <textarea name="message" id="message"></textarea>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        var message, result, character = 150, characterLength;
+        message = document.querySelector('#message');
+        result = document.querySelector('#result');
+        message.onkeydown = characterControl;
+        message.onkeyup = characterControl;
+
+            function characterControl() {
+                characterLength = this.value.length;
+                if ( character > characterLength || character == characterLength ) {
+                    var lastLength = character - characterLength;
+                    result.textContent = "You can still use " + lastLength + " character.";
+                }
+                else{
+                    this.value = this.value.substr (0,character);
+                }
+            }
+
+
+    </script>
+
+</body>
+
+</html>
