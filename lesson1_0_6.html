@@ -1,0 +1,49 @@
+<!--
+    identification number check
+
+    NOT FINISHED
+-->
+
+<html>
+
+<head>
+    <title>Lesson 106</title>
+</head>
+
+<body>
+
+    <form id="form1" name="form1">
+        <label for="tc">TR id</label>
+        <input type="text" id="tc">
+        <button type="button" id="btn">control</button>
+        <p id="resultFalse" style="display: none;"></p>
+        <p id="resultTrue" style="display: none;"></p>
+
+    </form>
+
+    <script>
+        var id, btn, resultFalse, resultTrue;
+        id = document.querySelector('#tc');
+        btn = document.querySelector('#btn');
+        resultFalse = document.querySelector('#resultFalse');
+        resultTrue = document.querySelector('#resultTrue');
+        
+        btn.addEventListener('click', function () {
+            if (id.value.length !== 11) {
+                resultFalse.style.display = "block";
+                resultFalse.textContent = "Id number must have 11 characters.";
+            }
+            else if(isNaN(id.value)){
+                resultFalse.textContent = "Id number includes only numbers.";
+            }
+            else if(id.value[0] == 0){
+                resultFalse.textContent = "First digit cannot be 0.";
+            }
+            else if()
+        })
+
+    </script>
+
+</body>
+
+</html>
