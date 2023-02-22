@@ -1,0 +1,46 @@
+<!--
+    changing background with button
+-->
+
+<html>
+
+<head>
+    <title>Lesson 107</title>
+
+    <style>
+        .color {
+            border: 2px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>
+    <div id="result" class="color">change my color :)</div>
+    </p>
+    <button type="button" id="btn">change background color</button>
+
+    <script>
+        var btn, result, count = 0;
+
+        btn = document.querySelector('#btn');
+        result = document.querySelector('#result');
+
+        btn.addEventListener('click', function () {
+            if(count % 2 === 0){
+                result.style.backgroundColor = "indigo";
+            }
+            else{
+                result.style.backgroundColor = "limegreen";
+            }
+            count++;
+        })
+
+
+    </script>
+
+</body>
+
+</html>
