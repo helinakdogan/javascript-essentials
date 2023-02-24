@@ -2,29 +2,34 @@
     var vs let vs const
 
     * var
-    - function scoped
+    - function & global scoped
     - allows to redeclare variables
     - allows to reassign within scope
-    - hoisting occurs in var
+    - hoisting occurs -> initialized with undefined
 
     * let
     - block-scoped	                    
     - does not allow to redeclare variables 
     - allows to reassign within scope
-    - hoisting does not occur in let	            
+    - hoisting does not occur -> uninitialized	            
 
     * const
     - block-scoped	 
     - does not allow to redeclare variables 
     - does not allow to reassign within scope
-    - hoisting does not occur in let	
+    - hoisting does not occur -> uninitialized	
 
+
+ -----------------------------------------------------------------
+
+
+    default parameters
 -->
 
 <html>
 
 <head>
-    <title>Lesson 109 110</title>
+    <title>Lesson 109 110 111</title>
 </head>
 
 <body>
@@ -33,10 +38,13 @@
     <script>
         
         "use strict";
-        var x=7;   
-        result = document.querySelector('#result').innerHTML = x;
+        let result = document.querySelector('#result');
 
-       
+       function getPow(x, y=1) {
+            return Math.pow(x,y);
+       }
+
+       result.innerHTML = getPow(7);
 
     </script>
 
