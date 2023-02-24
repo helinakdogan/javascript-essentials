@@ -1,0 +1,42 @@
+<!--
+    class
+    getter and setter
+-->
+
+<html>
+
+<head>
+    <title>Lesson 113</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        let result = document.querySelector('#result');
+
+
+        class Person{
+            constructor(n){
+                this.name = n;
+            }
+
+            getName(){
+                return this.name;
+            }
+
+            setName(name){
+                this.name = name;
+            }
+        }
+
+        var myPerson = new Person("Helin");
+
+
+       result.innerHTML = myPerson.getName();
+
+    </script>
+
+</body>
+
+</html>
