@@ -1,0 +1,31 @@
+<!--
+    template literals
+-->
+
+<html>
+
+<head>
+    <title>Lesson 117</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+
+        let result = document.querySelector('#result');
+
+        function getFullName(firstName, lastName){
+            result.innerHTML = `Full name : ${firstName} ${lastName}`;
+        }
+        
+        getFullName("Helin","Akdoğan");
+       
+       
+
+    </script>
+
+</body>
+
+</html>
