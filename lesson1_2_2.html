@@ -1,0 +1,37 @@
+<!--
+    set object
+    * .has("")
+    * .size
+    * .delete("")
+    * .clear()
+-->
+
+<html>
+
+<head>
+    <title>Lesson 122</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        let dataSet = new Set();
+        dataSet.add("x");
+        dataSet.add("y");
+        dataSet.add("z");
+
+        result.innerHTML = dataSet.has("y");
+
+       
+
+
+
+
+
+    </script>
+
+</body>
