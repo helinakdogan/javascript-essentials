@@ -1,0 +1,56 @@
+<!--
+    get, set, super methods
+    intro to inheritance
+-->
+
+<html>
+
+<head>
+    <title>Lesson 115</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        let result = document.querySelector('#result');
+
+
+        class Person{
+            constructor(fn){
+                this.firstName = fn;
+            }
+
+            get gfirstName(){
+                return this.firstName;
+            }
+
+            set sfirstName(name){
+                this.firstName = name;
+            }
+        }
+
+        class Engineer extends Person{
+            constructor(n,j){
+                super(n);
+                this.job = j;
+            }
+
+            get gjob(){
+                return this.job;
+            }
+
+            set sjob(j){
+                this.job = j;
+            }
+        }
+        var myPerson = new Engineer("Helin", "engineer");
+
+
+       result.innerHTML = myPerson.job;
+
+    </script>
+
+</body>
+
+</html>
