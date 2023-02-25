@@ -1,0 +1,35 @@
+<!--
+    generators
+    yield
+-->
+
+<html>
+
+<head>
+    <title>Lesson 120</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        function* gen() {
+            yield "hello1";
+            "hello2";
+            yield "hello3";
+            return "hello4";
+        }
+
+        for (let item of gen()){
+            result.innerHTML += item + "<br>";
+        }
+        
+
+
+
+    </script>
+
+</body>
