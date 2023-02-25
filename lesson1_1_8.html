@@ -13,10 +13,19 @@
 
     <script>
         "use strict";
-
         let result = document.querySelector('#result');
 
-       
+        let letters1 = ["a","b","c","d","e","f"];
+        let letters2 = ["x","y","z"];
+        let joinArray = [...letters1, ...letters2];
+
+
+        function sum(x,y,z) {
+            return x+y+z;
+        }
+        let numbers = [9,5,4];
+
+        result.innerHTML = sum(...numbers);
        
        
 
