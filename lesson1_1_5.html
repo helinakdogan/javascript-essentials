@@ -6,7 +6,7 @@
 <html>
 
 <head>
-    <title>Lesson 115</title>
+    <title>Lesson 115 116</title>
 </head>
 
 <body>
@@ -28,6 +28,10 @@
             set sfirstName(name){
                 this.firstName = name;
             }
+
+            static message(){
+                return "You reached the method outside the class.";
+            }
         }
 
         class Engineer extends Person{
@@ -47,7 +51,7 @@
         var myPerson = new Engineer("Helin", "engineer");
 
 
-       result.innerHTML = myPerson.job;
+       result.innerHTML = myPerson.job + "<br>" + Person.message();
 
     </script>
 
