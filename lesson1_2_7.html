@@ -1,0 +1,29 @@
+<!--
+    for each
+-->
+
+<html>
+
+<head>
+    <title>Lesson 127</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        let letters = ["a","b","c","d"];
+
+
+        letters.forEach(function(par, index){
+            ++index;
+            result.innerHTML += index + ". " + par + "<br>";
+            result.style.color = "lightblue";
+        });
+
+    </script>
+
+</body>
