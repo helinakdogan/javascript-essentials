@@ -1,0 +1,33 @@
+<!--
+    Map and WeakMap
+    * .has("")
+    * .get("")
+    * .delete("")
+    * .keys()
+    * .values()
+    * .size()
+    * .clear()
+-->
+
+<html>
+
+<head>
+    <title>Lesson 123</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        let m = new Map();
+        m.set("key1", "value1");
+        m.set("key2", "value2");
+
+        result.innerHTML = m.get("key2");
+
+    </script>
+
+</body>
