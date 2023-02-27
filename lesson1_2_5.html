@@ -1,0 +1,50 @@
+<!--
+    Promise
+    * Promise.race
+    * Promise.all
+-->
+
+<html>
+
+<head>
+    <title>Lesson 125</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+
+
+        let show1 = new Promise(function (success, failure) {
+            setTimeout(function () {
+                success("successful");
+            }, 1000);
+        });
+
+        let show2 = new Promise(function (success, failure) {
+            setTimeout(function () {
+                failure("failed");
+            }, 1000);
+        });
+
+        
+
+        Promise.all([show1, show2]).then(function success(p) {
+            result.innerHTML = p;
+        })
+            .catch(function failure(p) {
+                result.innerHTML = p;
+            });
+
+
+
+
+
+
+    </script>
+
+</body>
