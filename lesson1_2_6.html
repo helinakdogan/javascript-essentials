@@ -1,0 +1,33 @@
+<!--
+    number and string methods
+    * .repeat(how many times you want)
+    * .startsWith("",)  / .endsWith()
+    * .includes("")
+
+    * Number.isfinite("")
+    * Number.isNaN("")
+    * Number.isInteger("")
+    * Number.isSafeInteger("")
+-->
+
+<html>
+
+<head>
+    <title>Lesson 126</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        let text = "aaxxxa aaaaacvaaaaaaaaaa";
+        let text2 = "bbxxxxb bbbbbdgdgbbbbbbbbbb";
+
+        result.innerHTML = text2.startsWith("x",10) ? "yes" : "no";
+
+    </script>
+
+</body>
