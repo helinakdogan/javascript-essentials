@@ -1,1 +1,41 @@
- 
+<!--
+    what is JSON
+-->
+
+<html>
+
+<head>
+    <title>Lesson 128</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        let obj1, obj2, obj3, sendJSON, takeJSON, json1, txt, storeObj;
+
+        //js object -> JSON
+        obj1 = { "name": "helin", "age": "21" };
+        sendJSON = JSON.stringify(obj1);
+
+        //JSON -> js object
+        takeJSON = '{ "color":"green"}';
+        obj2 = JSON.parse(takeJSON);
+
+
+
+        
+        obj3 = { "name": "helin", "age": "21" };
+        json1 = JSON.stringify(obj3);
+        localStorage.setItem("storageJSON",json1);
+        txt = localStorage.getItem("storageJSON");
+        storeObj = JSON.parse(txt);
+        result.innerHTML = storeObj.name;
+
+
+    </script>
+
+</body>
