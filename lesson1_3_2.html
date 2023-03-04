@@ -1,0 +1,47 @@
+<!--
+    JSON object
+-->
+
+<html>
+
+<head>
+    <title>Lesson 132</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+        let obj1, obj2, obj3, i, j;
+
+        obj1 = {
+            "name": "helin",
+            "age": "21",
+            "info": {
+                "weight": 55,
+                "height": 160
+            }
+        };
+
+
+        //i is key (like name, age) but I need its value
+        for (i in obj1) {
+            //result.innerHTML += obj1[i] + "<br>";
+            
+        }
+
+        obj1["info"]["weight"] = 54;
+
+
+        for (j in obj1["info"]) {
+            result.innerHTML += obj1["info"][j] + "<br>";
+        }
+
+
+//result.innerHTML = obj1["name"];
+    </script>
+
+</body>
