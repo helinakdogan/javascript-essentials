@@ -15,9 +15,36 @@
         "use strict";
         let result = document.querySelector('#result');
 
-        let obj1, obj2, obj3;
+        let obj1, obj2, obj3, i, j, x, message;
+
+        obj1 = {
+            "name": "helin",
+            "age": "21",
+            "info": ["55", "160"],
+            "cars": [
+                {"brandOfCar":"Nissan", "models":["micra","note"]},
+                {"brandOfCar":"Ford"}
+            ]
+        };
+
+
+        obj1["info"][0] = 54;
+
+        for (i in obj1["info"]) {
+            //result.innerHTML += obj1["info"][i] + "<br>";
+            
+        }
 
         
+        for (j in obj1["cars"]) {
+            message += "<h2>" + obj1["cars"][j]["brandOfCar"] + "<br>" + "</h2>";
+            for(x in obj1["cars"][j]["models"]){
+                message += obj1["cars"][j]["models"][x] + "<br>";
+            }
+        }
+
+        result.innerHTML = message;
+
     </script>
 
 </body>
