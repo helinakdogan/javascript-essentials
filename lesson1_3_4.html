@@ -1,0 +1,49 @@
+<!--
+    JSON parse()
+-->
+
+<html>
+
+<head>
+    <title>Lesson 135</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="run()">click here</button>
+
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+
+
+
+        function run(){
+            let txt, obj;
+
+            txt = '{"name":"helin", "age":"function(){return 28;}", "birthday":"2001-04-19"}';
+            
+            obj = JSON.parse(txt, function(key, value){
+                if(key==="birthday"){
+                    return new Date(value);
+                }
+                else{
+                    return value;
+                }
+            });
+
+            //obj["age"] = eval("("+obj["age"]+")");
+            
+            
+            //obj["birthday"] = new Date( obj["birthday"] );      eval is not safe
+
+            result.innerHTML = obj["birthday"].getFullYear();
+        }
+
+
+
+
+
+    </script>
+
+</body>
